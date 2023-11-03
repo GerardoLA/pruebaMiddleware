@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\PreCarga;
-use App\Http\Middleware\AfterCarga;
+use App\Http\Middleware\afterCarga;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +17,4 @@ use App\Http\Middleware\AfterCarga;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware([PreCarga::class,AfterCarga::class]);
+})->middleware([PreCarga::class,afterCarga::class]);
